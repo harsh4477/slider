@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <ul class="slider">
+        <li class="item" style="background-image: url('./images/bg1.jpg')">
+          <div class="content">
+            <h2 class="title">"Lossless Youths"</h2>
+            <p class="description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+              fuga voluptatum, iure corporis inventore praesentium nisi. Id
+              laboriosam ipsam enim.
+            </p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li class="item" style="background-image: url('./images/bg2.jpg')">
+          <div class="content">
+            <h2 class="title">"Estrange Bond"</h2>
+            <p class="description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+              fuga voluptatum, iure corporis inventore praesentium nisi. Id
+              laboriosam ipsam enim.
+            </p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li class="item" style="background-image: url('./images/bg3.jpg')">
+          <div class="content">
+            <h2 class="title">"The Gate Keeper"</h2>
+            <p class="description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+              fuga voluptatum, iure corporis inventore praesentium nisi. Id
+              laboriosam ipsam enim.
+            </p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li class="item" style="background-image: url('./images/bg4.jpg')">
+          <div class="content">
+            <h2 class="title">"Last Trace Of Us"</h2>
+            <p class="description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+              fuga voluptatum, iure corporis inventore praesentium nisi. Id
+              laboriosam ipsam enim.
+            </p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <!-- <li
+          class="item"
+          style="
+            background-image: url('https://theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg');
+          "
+        >
+          <div class="content">
+            <h2 class="title">"Urban Decay"</h2>
+            <p class="description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+              fuga voluptatum, iure corporis inventore praesentium nisi. Id
+              laboriosam ipsam enim.
+            </p>
+            <button>Read More</button>
+          </div>
+        </li> -->
+        <!-- <li
+          class="item"
+          style="
+            background-image: url('https://da.se/app/uploads/2015/09/simon-december1994.jpg');
+          "
+        >
+          <div class="content">
+            <h2 class="title">"The Migration"</h2>
+            <p class="description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+              fuga voluptatum, iure corporis inventore praesentium nisi. Id
+              laboriosam ipsam enim.
+            </p>
+            <button>Read More</button>
+          </div>
+        </li> -->
+      </ul>
+      <nav class="nav">
+        <span class="btn prev" name="arrow-back-outline"><</span>
+        <span class="btn next" name="arrow-forward-outline">></span>
+      </nav>
+    </main>
+
+    <script>
+      const slider = document.querySelector(".slider");
+
+      function activate(e) {
+        const items = document.querySelectorAll(".item");
+        e.target.matches(".next") && slider.append(items[0]);
+        e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
+      }
+
+      document.addEventListener("click", activate, false);
+    </script>
+  </body>
+</html>
